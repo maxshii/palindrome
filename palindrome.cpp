@@ -1,3 +1,5 @@
+//Max Shi
+//10/5/2021
 //This program will return whether or not an input is a palindrome
 #include <iostream>
 #include <cstring>
