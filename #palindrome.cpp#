@@ -28,18 +28,17 @@ int main()
 	}
       //cout << str << endl; 
     }
-  //cout << strlen(str);
+  cout << sizeof(str);
   //creates flipped which is str reversed
   count = 0;
-  char flipped[strlen(str)];
-  for(int i = strlen(str) - 1; i >= 0; i--)
+  char flipped[sizeof(str)/sizeof(str[0]-1];
+  for(int i = sizeof(str) - 2; i >= 0; i--)
     {
       flipped[count] = str[i];
       count ++;
       //cout << flipped << endl;
     }
-  flipped[count] = '\n';
-  
+
   //tells user whether or not the input is a palindrome
   if(strcmp(str, flipped) == 0)
     {
