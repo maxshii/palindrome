@@ -15,20 +15,18 @@ int main()
   int count = 0;
   for (int i = 0; i < 80; i++)
     {
-      if(isalnum(input[i]))
+      if(isalnum(input[i])) //adds input[i] to str if it is a number or letter
 	{
 	  str[count] = tolower(input[i]);
 	  count++;
-
 	}
-      else if(input[i] == '\0')
+      else if(input[i] == '\0') //ends str if input has ended
 	{
 	  str[count] = '\0';
 	  break;
-	}
-      //cout << str << endl; 
+	} 
     }
-  //cout << strlen(str);
+
   //creates flipped which is str reversed
   count = 0;
   char flipped[strlen(str)];
@@ -36,9 +34,8 @@ int main()
     {
       flipped[count] = str[i];
       count ++;
-      //cout << flipped << endl;
+      flipped[count] = '\0'; //makes sure no unwanted characters end up in flipped
     }
-  flipped[count] = '\n';
   
   //tells user whether or not the input is a palindrome
   if(strcmp(str, flipped) == 0)
